@@ -56,8 +56,8 @@ class TechniciansFixture extends TestFixture
             'phone' => 'Lorem ipsum dolor sit amet',
             'email' => 'Lorem ipsum dolor sit amet',
             'started' => '2017-09-19',
-            'created' => '2017-09-19 00:45:10',
-            'modified' => '2017-09-19 00:45:10'
+            'created' => '2017-09-19 00:53:50',
+            'modified' => '2017-09-19 00:53:50'
         ],
     ];
 }
