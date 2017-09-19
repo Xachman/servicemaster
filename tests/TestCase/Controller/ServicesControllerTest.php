@@ -21,7 +21,7 @@ class ServicesControllerTest extends IntegrationTestCase
         'app.customers',
         'app.job',
         'app.order',
-        'app.techicians'
+        'app.technicians'
     ];
 
     /**

@@ -21,7 +21,7 @@ class ServicesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Jobs', 'Techicians']
+            'contain' => ['Jobs', 'Technicians']
         ];
         $services = $this->paginate($this->Services);
 
@@ -39,7 +39,7 @@ class ServicesController extends AppController
     public function view($id = null)
     {
         $service = $this->Services->get($id, [
-            'contain' => ['Jobs', 'Techicians']
+            'contain' => ['Jobs', 'Technicians']
         ]);
 
         $this->set('service', $service);
@@ -64,8 +64,8 @@ class ServicesController extends AppController
             $this->Flash->error(__('The service could not be saved. Please, try again.'));
         }
         $jobs = $this->Services->Jobs->find('list', ['limit' => 200]);
-        $techicians = $this->Services->Techicians->find('list', ['limit' => 200]);
-        $this->set(compact('service', 'jobs', 'techicians'));
+        $Technicians = $this->Services->Technicians->find('list', ['limit' => 200]);
+        $this->set(compact('service', 'jobs', 'Technicians'));
         $this->set('_serialize', ['service']);
     }
 
@@ -91,8 +91,8 @@ class ServicesController extends AppController
             $this->Flash->error(__('The service could not be saved. Please, try again.'));
         }
         $jobs = $this->Services->Jobs->find('list', ['limit' => 200]);
-        $techicians = $this->Services->Techicians->find('list', ['limit' => 200]);
-        $this->set(compact('service', 'jobs', 'techicians'));
+        $Technicians = $this->Services->Technicians->find('list', ['limit' => 200]);
+        $this->set(compact('service', 'jobs', 'Technicians'));
         $this->set('_serialize', ['service']);
     }
 

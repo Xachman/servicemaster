@@ -29,7 +29,7 @@ class ServicesTableTest extends TestCase
         'app.customers',
         'app.job',
         'app.order',
-        'app.techicians'
+        'app.technicians'
     ];
 
     /**
