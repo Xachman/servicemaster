@@ -21,8 +21,12 @@ class ServicesFixture extends TestFixture
         'job_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'techician_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'service_date' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        '_indexes' => [
+            'job_id' => ['type' => 'index', 'columns' => ['job_id'], 'length' => []],
+        ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'job_id' => ['type' => 'foreign', 'columns' => ['job_id'], 'references' => ['jobs', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -41,7 +45,7 @@ class ServicesFixture extends TestFixture
             'id' => 1,
             'job_id' => 1,
             'techician_id' => 1,
-            'service_date' => '2017-09-18'
+            'service_date' => '2017-09-19'
         ],
     ];
 }

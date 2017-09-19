@@ -20,7 +20,8 @@ class JobsControllerTest extends IntegrationTestCase
         'app.customers',
         'app.job',
         'app.order',
-        'app.services'
+        'app.services',
+        'app.techicians'
     ];
 
     /**
