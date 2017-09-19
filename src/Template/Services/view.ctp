@@ -27,8 +27,8 @@
             <td><?= $this->Number->format($service->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Techician Id') ?></th>
-            <td><?= $this->Number->format($service->techician_id) ?></td>
+            <th scope="row"><?= __('Technician Id') ?></th>
+            <td><?= $this->Number->format($service->technician_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Service Date') ?></th>

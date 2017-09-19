@@ -10,7 +10,7 @@ use Cake\Validation\Validator;
  * Services Model
  *
  * @property \App\Model\Table\JobsTable|\Cake\ORM\Association\BelongsTo $Jobs
- * @property \App\Model\Table\TechiciansTable|\Cake\ORM\Association\BelongsTo $Techicians
+ * @property |\Cake\ORM\Association\BelongsTo $Technicians
  *
  * @method \App\Model\Entity\Service get($primaryKey, $options = [])
  * @method \App\Model\Entity\Service newEntity($data = null, array $options = [])
@@ -41,8 +41,8 @@ class ServicesTable extends Table
             'foreignKey' => 'job_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Techicians', [
-            'foreignKey' => 'techician_id',
+        $this->belongsTo('Technicians', [
+            'foreignKey' => 'technician_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -77,7 +77,7 @@ class ServicesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['job_id'], 'Jobs'));
-        $rules->add($rules->existsIn(['techician_id'], 'Techicians'));
+        $rules->add($rules->existsIn(['technician_id'], 'Technicians'));
 
         return $rules;
     }

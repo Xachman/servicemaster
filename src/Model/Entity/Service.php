@@ -8,7 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $job_id
- * @property int $techician_id
+ * @property int $technician_id
  * @property \Cake\I18n\FrozenDate $service_date
  *
  * @property \App\Model\Entity\Job $job
@@ -28,7 +28,7 @@ class Service extends Entity
      */
     protected $_accessible = [
         'job_id' => true,
-        'techician_id' => true,
+        'technician_id' => true,
         'service_date' => true,
         'job' => true,
         'techician' => true

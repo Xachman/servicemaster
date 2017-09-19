@@ -17,7 +17,7 @@
         <legend><?= __('Add Service') ?></legend>
         <?php
             echo $this->Form->control('job_id', ['options' => $jobs]);
-            echo $this->Form->control('techician_id');
+            echo $this->Form->control('technician_id');
             echo $this->Form->control('service_date');
         ?>
     </fieldset>

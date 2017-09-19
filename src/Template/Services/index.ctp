@@ -19,7 +19,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('job_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('techician_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('technician_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('service_date') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -29,7 +29,7 @@
             <tr>
                 <td><?= $this->Number->format($service->id) ?></td>
                 <td><?= $service->has('job') ? $this->Html->link($service->job->id, ['controller' => 'Jobs', 'action' => 'view', $service->job->id]) : '' ?></td>
-                <td><?= $this->Number->format($service->techician_id) ?></td>
+                <td><?= $this->Number->format($service->technician_id) ?></td>
                 <td><?= h($service->service_date) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $service->id]) ?>
