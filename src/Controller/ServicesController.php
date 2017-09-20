@@ -64,8 +64,8 @@ class ServicesController extends AppController
             $this->Flash->error(__('The service could not be saved. Please, try again.'));
         }
         $jobs = $this->Services->Jobs->find('list', ['limit' => 200]);
-        $Technicians = $this->Services->Technicians->find('list', ['limit' => 200]);
-        $this->set(compact('service', 'jobs', 'Technicians'));
+        $technicians = $this->Services->Technicians->find('list', ['limit' => 200]);
+        $this->set(compact('service', 'jobs', 'technicians'));
         $this->set('_serialize', ['service']);
     }
 
