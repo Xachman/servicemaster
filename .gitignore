@@ -33,3 +33,5 @@ nbproject/* # NetBeans
 .vscode # Visual Studio Code
 .sass-cache/ # Sass preprocessor
 node_modules/
+/nbproject/private/
+/nbproject
