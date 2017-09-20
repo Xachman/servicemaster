@@ -37,24 +37,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
 <div class="top-bar">
   <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><?= $this->fetch('title') ?></li>
-      <li>
-        <a href="#">One</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
+  <?= $this->fetch('title') ?>
   </div>
   <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <?=$this->Html->link('Customers', ["controller" => 'Customers', 'action' => 'index'])?>
+      </li>
+      <li>
+        <?=$this->Html->link('Jobs', ["controller" => 'Jobs', 'action' => 'index'])?>
+      </li>
+      <li>
+        <?=$this->Html->link('Technicians', ["controller" => 'Technicians', 'action' => 'index'])?>
+      </li>
+      <li>
+        <?=$this->Html->link('Services', ["controller" => 'Services', 'action' => 'index'])?>
+      </li>
     </ul>
   </div>
 </div>
