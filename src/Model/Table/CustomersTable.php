@@ -41,10 +41,7 @@ class CustomersTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->hasMany('Job', [
-            'foreignKey' => 'customer_id'
-        ]);
-        $this->hasMany('Order', [
+        $this->hasMany('Jobs', [
             'foreignKey' => 'customer_id'
         ]);
     }

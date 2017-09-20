@@ -119,7 +119,7 @@
     </table>
     <div class="related">
         <h4><?= __('Related Job') ?></h4>
-        <?php if (!empty($customer->job)): ?>
+        <?php if (!empty($customer->jobs)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
@@ -129,7 +129,7 @@
                 <th scope="col"><?= __('Description') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($customer->job as $job): ?>
+            <?php foreach ($customer->jobs as $job): ?>
             <tr>
                 <td><?= h($job->id) ?></td>
                 <td><?= h($job->customer_id) ?></td>
@@ -140,33 +140,6 @@
                     <?= $this->Html->link(__('View'), ['controller' => 'Job', 'action' => 'view', $job->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Job', 'action' => 'edit', $job->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Job', 'action' => 'delete', $job->id], ['confirm' => __('Are you sure you want to delete # {0}?', $job->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Order') ?></h4>
-        <?php if (!empty($customer->order)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Job Id') ?></th>
-                <th scope="col"><?= __('Customer Id') ?></th>
-                <th scope="col"><?= __('Amount') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($customer->order as $order): ?>
-            <tr>
-                <td><?= h($order->id) ?></td>
-                <td><?= h($order->job_id) ?></td>
-                <td><?= h($order->customer_id) ?></td>
-                <td><?= h($order->amount) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Order', 'action' => 'view', $order->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Order', 'action' => 'edit', $order->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Order', 'action' => 'delete', $order->id], ['confirm' => __('Are you sure you want to delete # {0}?', $order->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
