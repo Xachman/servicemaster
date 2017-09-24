@@ -1,9 +1,10 @@
 <?php
 
-namespace App
+namespace App;
 
 interface ISettings {
     public function businessName(): string;
     public function businessAddress(): string;
-    public function buss
+    public function businessCity(): string;
+    public function businessState(): string;
 }
