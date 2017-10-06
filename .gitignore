@@ -35,3 +35,4 @@ nbproject/* # NetBeans
 node_modules/
 /nbproject/private/
 /nbproject
+/tests/tmp
