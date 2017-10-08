@@ -32,6 +32,11 @@ class SettingsController extends AppController {
         $this->Settings = $model;
     }
     
+    public function index() {
+        $settings = $this->Settings->get();
+        
+        $this->set(compact("settings"));
+    }
     public function edit() {
         if ($this->request->is(['patch', 'post', 'put'])) {
             $this->Settings->save($this->request->data);
