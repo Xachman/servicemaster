@@ -23,7 +23,6 @@ class SettingsController extends AppController {
     
     
     public function initialize() {
-        var_dump("init");
         $this->modelClass = false;
         $this->Settings = new Settings();
     }
