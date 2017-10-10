@@ -13,4 +13,13 @@ class SettingsTest extends TestCase {
         $this->assertEquals("Sanjose", $settings->businessCity());
         $this->assertEquals("CA", $settings->businessState());
     }
+
+    public function testSettingsEmpty() {
+
+        $settings = new Settings(file_get_contents(dirname(dirname(__FILE__))."/mocks/settings-empty.json"));
+        $this->assertEquals("", $settings->businessName());
+        $this->assertEquals("", $settings->businessAddress());
+        $this->assertEquals("", $settings->businessCity());
+        $this->assertEquals("", $settings->businessState());
+    }
 }
