@@ -28,7 +28,6 @@ services:
           MYSQL_ROOT_PASSWORD: root
         volumes:
           - /var/lib/mysql
-          - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
         network_mode: bridge
     testdb:
       image: mysql
