@@ -7,15 +7,15 @@ class Settings implements ISettings {
         $this->json = json_decode($jsonString);
     }
     public function businessName(): string {
-        return $this->json->{"business-name"};
+        return $this->json->business->name;
     }
     public function businessAddress(): string {
-        return $this->json->{"business-address"};
+        return $this->json->business->address;
     }
     public function businessCity(): string {
-        return $this->json->{"business-city"};
+        return $this->json->business->city;
     }
     public function businessState(): string {
-        return $this->json->{"business-state"};
+        return $this->json->business->state;
     }
 }

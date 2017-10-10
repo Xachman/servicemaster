@@ -1,6 +1,8 @@
 {
-    "business-name": "Pro Service",
-    "business-address": "123 Fair Lane",
-    "business-city": "Sanjose",
-    "business-state": "CA"
+    "business": {
+        "name": "Pro Service",
+        "address": "123 Fair Lane",
+        "city": "Sanjose",
+        "state": "CA"
+    }
 }
