@@ -35,4 +35,6 @@ nbproject/* # NetBeans
 node_modules/
 /nbproject/private/
 /nbproject
-/tests/tmp
+/tests/tmp/*
+!tests/tmp/.gitkeep
+config/settings.json
