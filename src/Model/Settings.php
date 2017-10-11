@@ -22,7 +22,6 @@ class Settings {
     }
     
     public function save($data) {
-        var_dump("settings ", $this->getFile());
         file_put_contents($this->getFile(), json_encode($data));
     }
 
