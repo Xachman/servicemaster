@@ -1,5 +1,5 @@
 <?php
- foreach($settings as $setting) {
+ foreach($settings['business'] as $setting) {
      ?>
      <div class="setting">
         <span class="title">
