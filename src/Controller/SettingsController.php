@@ -37,10 +37,15 @@ class SettingsController extends AppController {
         $this->set(compact("settings"));
     }
     public function edit() {
+        $settings = $this->Settings->get();
+        $this->set(compact("settings"));
+
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $this->Settings->save($this->request->data);
         }
     }
+
     
 
 }

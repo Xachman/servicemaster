@@ -30,10 +30,12 @@ class Settings {
         $settings = new \App\Settings(file_get_contents($this->getFile()));
         
         $settingsArray = [
-            ["title" => "Bisiness Name", "value" => $settings->businessName()],
-            ["title" => "Business Address", "value" => $settings->businessAddress()],
-            ["title" => "Business City", "value" => $settings->businessCity()],
-            ["title" => "Business State", "value" => $settings->businessState()]
+            ["business" =>
+                ["title" => "Bisiness Name", "name" => "name", "value" => $settings->businessName()],
+                ["title" => "Business Address","name" => "address", "value" => $settings->businessAddress()],
+                ["title" => "Business City","name" => "city", "value" => $settings->businessCity()],
+                ["title" => "Business State","name" => "state", "value" => $settings->businessState()]
+            ]
         ];
 
         return $settingsArray;
