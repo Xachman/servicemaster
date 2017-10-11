@@ -53,6 +53,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       <li>
         <?=$this->Html->link('Services', ["controller" => 'Services', 'action' => 'index'])?>
       </li>
+      <li>
+        <?=$this->Html->link('Settings', ["controller" => 'Settings', 'action' => 'index'])?>
+      </li>
     </ul>
   </div>
 </div>
