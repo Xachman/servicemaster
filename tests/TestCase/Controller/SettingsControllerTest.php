@@ -23,10 +23,7 @@ class SettingsControllerTest extends IntegrationTestCase
         parent::controllerSpy($event, $controller = null);
         
         if (isset($this->_controller)) {
-            var_dump("controller spy");
             $this->_controller->setSettingsModel(new \App\Model\Settings($this->filePath));
-            var_dump($this->_controller->Settings);
-            
         }
     }
     public function testEdit() {
@@ -45,7 +42,6 @@ class SettingsControllerTest extends IntegrationTestCase
         $content = file_get_contents($this->filePath);
         $json = json_decode(file_get_contents($this->filePath), true);
         
-        var_dump($content);
         $this->assertEquals($settingsData, $json);
         
         
