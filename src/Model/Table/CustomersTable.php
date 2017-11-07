@@ -92,7 +92,6 @@ class CustomersTable extends Table
             ->integer('zip')
             ->requirePresence('zip', 'create')
             ->notEmpty('zip');
-
         $validator
             ->scalar('phone')
             ->requirePresence('phone', 'create')
@@ -101,7 +100,7 @@ class CustomersTable extends Table
         $validator
             ->scalar('fax')
             ->requirePresence('fax', 'create')
-            ->notEmpty('fax');
+            ->allowEmpty('fax');
 
         $validator
             ->scalar('contact_billing')
@@ -114,9 +113,7 @@ class CustomersTable extends Table
             ->notEmpty('address_billing');
 
         $validator
-            ->scalar('address2_billing')
-            ->requirePresence('address2_billing', 'create')
-            ->notEmpty('address2_billing');
+            ->allowEmpty('address2_billing');
 
         $validator
             ->scalar('city_billing')
@@ -140,8 +137,7 @@ class CustomersTable extends Table
 
         $validator
             ->scalar('fax_billing')
-            ->requirePresence('fax_billing', 'create')
-            ->notEmpty('fax_billing');
+            ->allowEmpty('fax_billing');
 
         $validator
             ->scalar('optained_by')
